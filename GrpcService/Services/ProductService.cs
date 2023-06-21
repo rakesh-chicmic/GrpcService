@@ -1,7 +1,9 @@
 ﻿using Grpc.Core;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GrpcService.Services
 {
+    [Authorize]
     public class ProductService : Product.ProductBase
     {
         private readonly ILogger<ProductService> _logger;
